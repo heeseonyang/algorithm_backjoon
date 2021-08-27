@@ -15,17 +15,15 @@ public class Test05_10818 {
 		int n = Integer.parseInt(br.readLine());
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		int i = 0;
+		int i=0;
 		int[] ar = new int[n];
-		
 		while(st.hasMoreTokens()) {
 			ar[i] = Integer.parseInt(st.nextToken());
-			i ++;
+			i++;
 		}
 		
 		Arrays.sort(ar);
 		System.out.println(ar[0] + " " + ar[n-1]);
-		
 	
 	}
 }
