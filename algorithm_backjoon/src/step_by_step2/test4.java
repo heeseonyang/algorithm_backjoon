@@ -1,26 +1,56 @@
 package step_by_step2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
-//public class test4 {
-//
-//	public static void main(String[] args) throws IOException{
-//		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        int k = Integer.parseInt(br.readLine());//k값 입력
-//        //int[] estimates = new int[];
-//        int answer;
-//        
-//        StringTokenizer st = new StringTokenizer(br.readLine()); //추정 접속자 수 입력
-//        for(int i=0; i<k; i++){
-//           estimates[i] = Integer.parseInt(st.nextToken());
-//           answer += estimates[i];
-//        }
-//        System.out.println(answer);
-//               
-//
-//	}
-//
-//}
+public class test4 {
+	
+	public static void main(String [] args) {
+		 int left;
+		 int right;
+		 int answer = 0;
+	        
+	        Scanner scan = new Scanner(System.in);
+	        left = scan.nextInt();
+	        right = scan.nextInt();
+	        
+	        int count=0;
+	       
+	        
+	        for(int i=left; i<=right; i++) {//사잇값구하기
+	        	System.out.println();
+	        	for(int j=1; j<=left; j++) {//각 사잇값의 약수구하기
+	        		if(i % j == 0) {
+	        			System.out.print(j + " "); //j=약수
+	        			count ++ ;
+	        		}
+ 	        	
+	        	}
+	        	
+	        	if(count % 2 ==0) {
+	        		answer += i;
+	        	}else {
+	        		answer -=i;
+	        	}
+	        	
+	        	left++;
+	       
+	        }
+	       
+	        
+	       
+	        
+	        
+	        System.out.println();
+	        System.out.println(answer);
+//	        System.out.println(count1);
+//	        System.out.println(count2);
+//	        System.out.println(sum);
+		
+		
+	}
+
+	
+
+	
+
+}
