@@ -6,25 +6,24 @@ public class Test04_2562 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int[] ar = new int[9];
+		int[]ar =  {scan.nextInt(), scan.nextInt(),scan.nextInt(),
+					scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),
+					scan.nextInt(),scan.nextInt()};
+		scan.close();
 		
-		for(int i =0; i<ar.length; i++) {
-			ar[i] = scan.nextInt();
-			
-		}
+		int max=0;
+		int index=0;
+		int count = 0;
 		
-		int max = ar[0];
-		int index = 0;//최대값의 위치를 알아낼 변수생성
-		
-		for(int i=0; i<ar.length; i++) {
-			if(ar[i]>max) {
-				max = ar[i];
-				index = i+1; //max가 된 값의 위치를 index에 저장
+		for(int value : ar) {
+			count++;
+			if(value > max) {
+				max = value;
+				index = count;
 			}
 		}
-		
-		System.out.println(max); //최대값
-		System.out.println(index); //최대값위치
+	
+		System.out.println(max + "\n" + index);
 
 	}
 
